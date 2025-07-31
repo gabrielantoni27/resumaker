@@ -2,16 +2,16 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import Navbar from './components/Navbar';
-import ResumeForm from './pages/ResumeForm'; // 👈 Add this
+import ResumeForm from './pages/ResumeForm';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 
 function App() {
   return (
-    <Router>
+    <Router basename="/resumaker"> {/* <-- FIXED HERE */}
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/resume" element={<ResumeForm />} /> {/* 👈 New Route */}
+        <Route path="/resume" element={<ResumeForm />} />
       </Routes>
     </Router>
   );

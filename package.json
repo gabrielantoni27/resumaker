@@ -2,6 +2,7 @@
   "name": "resumaker",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://gabrielantoni27.github.io/resumaker",
   "dependencies": {
     "@fortawesome/fontawesome-free": "^7.0.0",
     "@testing-library/dom": "^10.4.1",
@@ -10,6 +11,7 @@
     "@testing-library/user-event": "^13.5.0",
     "docx": "^9.5.1",
     "file-saver": "^2.0.5",
+    "gh-pages": "^6.1.0",
     "html2pdf.js": "^0.10.3",
     "lucide-react": "^0.535.0",
     "react": "^19.1.1",
@@ -22,6 +24,8 @@
   },
   "scripts": {
     "start": "react-scripts start",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
